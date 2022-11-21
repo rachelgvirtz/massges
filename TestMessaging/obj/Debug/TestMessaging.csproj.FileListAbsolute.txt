@@ -1,0 +1,11 @@
+C:\Users\Nadavg\source\repos\MessagingModule\TestMessaging\bin\Debug\TestMessaging.exe.config
+C:\Users\Nadavg\source\repos\MessagingModule\TestMessaging\bin\Debug\TestMessaging.exe
+C:\Users\Nadavg\source\repos\MessagingModule\TestMessaging\bin\Debug\TestMessaging.pdb
+C:\Users\Nadavg\source\repos\MessagingModule\TestMessaging\bin\Debug\MessagingModule.dll
+C:\Users\Nadavg\source\repos\MessagingModule\TestMessaging\bin\Debug\MessagingModule.pdb
+C:\Users\Nadavg\source\repos\MessagingModule\TestMessaging\bin\Debug\MessagingModule.dll.config
+C:\Users\Nadavg\source\repos\MessagingModule\TestMessaging\obj\Debug\TestMessaging.csprojAssemblyReference.cache
+C:\Users\Nadavg\source\repos\MessagingModule\TestMessaging\obj\Debug\TestMessaging.csproj.CoreCompileInputs.cache
+C:\Users\Nadavg\source\repos\MessagingModule\TestMessaging\obj\Debug\TestMessaging.csproj.CopyComplete
+C:\Users\Nadavg\source\repos\MessagingModule\TestMessaging\obj\Debug\TestMessaging.exe
+C:\Users\Nadavg\source\repos\MessagingModule\TestMessaging\obj\Debug\TestMessaging.pdb

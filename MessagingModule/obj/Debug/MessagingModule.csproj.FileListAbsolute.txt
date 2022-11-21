@@ -1,0 +1,7 @@
+C:\Users\Nadavg\source\repos\MessagingModule\MessagingModule\bin\Debug\MessagingModule.dll
+C:\Users\Nadavg\source\repos\MessagingModule\MessagingModule\bin\Debug\MessagingModule.pdb
+C:\Users\Nadavg\source\repos\MessagingModule\MessagingModule\obj\Debug\MessagingModule.csproj.CoreCompileInputs.cache
+C:\Users\Nadavg\source\repos\MessagingModule\MessagingModule\obj\Debug\MessagingModule.dll
+C:\Users\Nadavg\source\repos\MessagingModule\MessagingModule\obj\Debug\MessagingModule.pdb
+C:\Users\Nadavg\source\repos\MessagingModule\MessagingModule\bin\Debug\MessagingModule.dll.config
+C:\Users\Nadavg\source\repos\MessagingModule\MessagingModule\obj\Debug\MessagingModule.csprojAssemblyReference.cache

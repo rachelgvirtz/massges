@@ -1,0 +1,37 @@
+﻿USE [my-shidduch]
+GO
+/****** Object:  Table [dbo].[Notifications]    Script Date: 29/05/2022 18:06:07 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Notifications](
+	[NotificationID] [int] IDENTITY(1,1) NOT NULL,
+	[Subject] [nvarchar](50) NULL,
+	[Body] [nvarchar](max) NULL,
+	[SendingTime] [datetime] NULL,
+	[Type] [int] NULL,
+	[Status] [int] NULL,
+	[Error] [nvarchar](max) NULL,
+	[RecipientTo] [nvarchar](200) NULL,
+	[RecipientCC] [nvarchar](200) NULL,
+	[RecipientBCC] [nvarchar](200) NULL,
+	[RecipientFireId] [nvarchar](200) NULL,
+	[RecipientMobile] [nvarchar](50) NULL,
+	[PushLink] [nvarchar](max) NULL,
+ CONSTRAINT [PK_Notifications] PRIMARY KEY CLUSTERED 
+(
+	[NotificationID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+SET IDENTITY_INSERT [dbo].[Notifications] ON 
+GO
+INSERT [dbo].[Notifications] ([NotificationID], [Subject], [Body], [SendingTime], [Type], [Status], [Error], [RecipientTo], [RecipientCC], [RecipientBCC], [RecipientFireId], [RecipientMobile], [PushLink]) VALUES (1, N'Test Nadav', N'<span><b>Nadav</b></span>', CAST(N'2022-05-29T17:55:00.000' AS DateTime), 1, 0, NULL, N'nadavgrinberg@gmail.com', NULL, NULL, NULL, NULL, NULL)
+GO
+INSERT [dbo].[Notifications] ([NotificationID], [Subject], [Body], [SendingTime], [Type], [Status], [Error], [RecipientTo], [RecipientCC], [RecipientBCC], [RecipientFireId], [RecipientMobile], [PushLink]) VALUES (2, N'Test Nadav SMS', N'Test Nadav SMS', CAST(N'2022-05-29T17:55:00.000' AS DateTime), 2, 0, NULL, NULL, NULL, NULL, NULL, N'0524882881', NULL)
+GO
+INSERT [dbo].[Notifications] ([NotificationID], [Subject], [Body], [SendingTime], [Type], [Status], [Error], [RecipientTo], [RecipientCC], [RecipientBCC], [RecipientFireId], [RecipientMobile], [PushLink]) VALUES (3, N'Test Nadav PUSH', N'Test Nadav PUSH', CAST(N'2022-05-29T17:55:00.000' AS DateTime), 3, 0, NULL, NULL, NULL, NULL, N'fngk_JM868k:APA91bG8nn5YkWVcSddIZQnUqhH37XO04MMZ8qSzmfIvlnyQumX8ZzWsN5ROastzOXECJ0LmPa7FK0fmLKlv8yTgRdclN6nQVXTTXGsvhZA5hWd5nNkX1l1ZhMV7sEw8Bzga9Gi-A2gA', NULL, N'https://walla.co.il')
+GO
+SET IDENTITY_INSERT [dbo].[Notifications] OFF
+GO
