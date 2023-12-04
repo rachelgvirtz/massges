@@ -9,3 +9,15 @@ C:\Users\Nadavg\source\repos\MessagingModule\TestMessaging\obj\Debug\TestMessagi
 C:\Users\Nadavg\source\repos\MessagingModule\TestMessaging\obj\Debug\TestMessaging.csproj.CopyComplete
 C:\Users\Nadavg\source\repos\MessagingModule\TestMessaging\obj\Debug\TestMessaging.exe
 C:\Users\Nadavg\source\repos\MessagingModule\TestMessaging\obj\Debug\TestMessaging.pdb
+C:\projects\my-Shyduch\massges\massges\TestMessaging\bin\Debug\TestMessaging.exe.config
+C:\projects\my-Shyduch\massges\massges\TestMessaging\bin\Debug\TestMessaging.exe
+C:\projects\my-Shyduch\massges\massges\TestMessaging\bin\Debug\TestMessaging.pdb
+C:\projects\my-Shyduch\massges\massges\TestMessaging\bin\Debug\MessagingModule.dll
+C:\projects\my-Shyduch\massges\massges\TestMessaging\bin\Debug\MessagingModule.pdb
+C:\projects\my-Shyduch\massges\massges\TestMessaging\bin\Debug\MessagingModule.dll.config
+C:\projects\my-Shyduch\massges\massges\TestMessaging\obj\Debug\TestMessaging.csproj.AssemblyReference.cache
+C:\projects\my-Shyduch\massges\massges\TestMessaging\obj\Debug\TestMessaging.csproj.SuggestedBindingRedirects.cache
+C:\projects\my-Shyduch\massges\massges\TestMessaging\obj\Debug\TestMessaging.csproj.CoreCompileInputs.cache
+C:\projects\my-Shyduch\massges\massges\TestMessaging\obj\Debug\TestMessaging.csproj.CopyComplete
+C:\projects\my-Shyduch\massges\massges\TestMessaging\obj\Debug\TestMessaging.exe
+C:\projects\my-Shyduch\massges\massges\TestMessaging\obj\Debug\TestMessaging.pdb

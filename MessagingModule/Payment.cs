@@ -123,24 +123,24 @@ namespace MessagingModule
 
             // Other Optional vars :
             vars["ReturnValue"] = "1899"; // value that will be return and save in CardCom system
-            if (model.CardComParams.NumberOfPayments == 1)
-            {
-                vars["MaxNumOfPayments"] = "1";
+            //if (model.CardComParams.NumberOfPayments == 1)
+            //{
+                vars["MaxNumOfPayments"] = model.CardComParams.NumberOfPayments.ToString();
                 vars["MinNumOfPayments"] = "1";
-                vars["DefaultNumOfPayments"] = "1";
-            }
-            if (model.CardComParams.NumberOfPayments == 12)
-            {
-                vars["MaxNumOfPayments"] = "12";
-                vars["MinNumOfPayments"] = "1";
-                vars["DefaultNumOfPayments"] = "12";
-            }
-            if (model.CardComParams.NumberOfPayments == 5)
-            {
-                vars["MaxNumOfPayments"] = "12";
-                vars["MinNumOfPayments"] = "1";
-                vars["DefaultNumOfPayments"] = "5";
-            }
+                vars["DefaultNumOfPayments"] = model.CardComParams.NumberOfPayments.ToString() ;
+            //}
+            //if (model.CardComParams.NumberOfPayments == 12)
+            //{
+            //    vars["MaxNumOfPayments"] = "12";
+            //    vars["MinNumOfPayments"] = "1";
+            //    vars["DefaultNumOfPayments"] = "12";
+            //}
+            //if (model.CardComParams.NumberOfPayments == 5)
+            //{
+            //    vars["MaxNumOfPayments"] = "12";
+            //    vars["MinNumOfPayments"] = "1";
+            //    vars["DefaultNumOfPayments"] = "5";
+            //}
             vars["CardOwnerEmail"] = model.Email;
             vars["CardOwnerName"] = model.FullName;
             vars["CardOwnerPhone"] = model.Phone;

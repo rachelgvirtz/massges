@@ -230,7 +230,7 @@ namespace MessagingModule
                 myMessage.To.Add(new MailAddress(mail.To.Address, mail.To.Title));
                 myMessage.Subject = mail.Subject;
                 myMessage.IsBodyHtml = true;
-
+                myMessage.ReplyTo = new MailAddress(mail.From.Address);
                 myMessage.Body = mail.Body;
 
                 SmtpClient mySmtpClient = new SmtpClient();
@@ -254,6 +254,8 @@ namespace MessagingModule
                 return ex.Message;
             }
         }
+
+   
 
          public string SendPush(PushNotification message , string FireId)
         {
@@ -345,7 +347,7 @@ namespace MessagingModule
                     // אם שליחת סמסים ע"י ספק הסמסים נכשלת אזי נשלח ללקוח (יצחק שטיינברג) מייל אזהרה
                     if (xmlResponse.DocumentElement.SelectSingleNode("/RESPONSE/RESULTMESSAGE").InnerText != "Success")
                     {
-                        return Content(statusCode: HttpStatusCode.Unauthorized, "");
+                        return "ttpStatusCode.Unauthorized";
                         string mailBodyText = "שליחת סמס על ידי הספק:\n" + "cellact \n" + " נכשלה. אנא פנה לספק או למפתח של המערכת. פירטי ההזדהות בהתחברות לספק הסמסים הם:\n" + "שם החברה: " + Company + "\n" + "שם משתמש: " + User + "\n" + "סיסמה: " + Password + "\n" + "קוד השגיאה שחזר מהקריאה לשירות: " + "\n" + URLApi + "\nהוא:\n" + xmlResponse.DocumentElement.SelectSingleNode("/RESPONSE/RESULTMESSAGE").InnerText;
                       System.Net.Mail.MailMessage msg = new System.Net.Mail.MailMessage("info@maayan-hatahara.com", "levyshachar2@msn.com", "שליחת סמס נכשלה", mailBodyText);
 
