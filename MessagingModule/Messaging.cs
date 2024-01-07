@@ -11,6 +11,11 @@ using System.Web.Script.Serialization;
 using System.Xml;
 using System.Configuration;
 using System.Data;
+using FirebaseAdmin.Messaging;
+using Google.Apis.Auth.OAuth2;
+using System.Net.Http.Headers;
+using System.Net.Http;
+using System.Web.Hosting;
 
 namespace MessagingModule
 {
@@ -25,6 +30,81 @@ namespace MessagingModule
         static private string SenderName;
         DAL currDAL = null;
 
+        public class Data
+        {
+
+            public string body
+            {
+                get;
+                set;
+            }
+
+            public string title
+            {
+                get;
+                set;
+            }
+
+            public string key_1
+            {
+                get;
+                set;
+            }
+
+            public string key_2
+            {
+                get;
+                set;
+            }
+
+        }
+        public class Message
+        {
+
+            public string token
+            {
+                get;
+                set;
+            }
+
+            public Data data { get; set; }
+
+            
+            public Notification notification
+            {
+                get;
+                set;
+            }
+
+        }
+
+        public class Notification
+        {
+
+            public string title
+            {
+                get;
+                set;
+            }
+
+            public string body
+            {
+                get;
+                set;
+            }
+
+        }
+
+        public class Root
+        {
+
+            public Message message
+            {
+                get;
+                set;
+            }
+
+        }
         public Messaging()
         {
             string exeConfigPath = this.GetType().Assembly.Location;
@@ -322,7 +402,91 @@ namespace MessagingModule
             }
         }
 
-         public string SendSMS(string Message, string Phone)
+        public string SendPush_V2(PushNotification message, string FireId)
+        {
+            try
+            {
+               
+                string path = ConfigurationManager.AppSettings["JsonUrl"].ToString();
+                
+                //string fileName = ConfigurationManager.AppSettings["JsonUrl"].ToString(); //Download from Firebase Console ServiceAccount
+
+                string scopes = ConfigurationManager.AppSettings["firebaseMess"].ToString(); 
+                var bearertoken = ""; // Bearer Token in this variable
+
+                using(WebClient wc = new WebClient())
+                {
+                    Stream stream = wc.OpenRead(path);
+                    bearertoken = GoogleCredential
+                     .FromStream(stream) // Loads key file
+                     .CreateScoped(scopes) // Gathers scopes requested
+                     .UnderlyingCredential // Gets the credentials
+                     .GetAccessTokenForRequestAsync().Result; // Gets the Access Token
+                }
+
+                //using (var stream = new FileStream("http://localhost:52431/my-shidduch-5dd772549631.json", FileMode.Open, FileAccess.Read))
+                //{
+                //    bearertoken = GoogleCredential
+                //      .FromStream(stream) // Loads key file
+                //      .CreateScoped(scopes) // Gathers scopes requested
+                //      .UnderlyingCredential // Gets the credentials
+                //      .GetAccessTokenForRequestAsync().Result; // Gets the Access Token
+                //}
+
+                var clientHandler = new HttpClientHandler();
+                var client = new HttpClient(clientHandler);
+
+                client.BaseAddress = new Uri(ConfigurationManager.AppSettings["googleapis"].ToString()); // FCM HttpV1 API
+
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                //client.DefaultRequestHeaders.Accept.Add("Authorization", "Bearer " + bearertoken);
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearertoken); // Authorization Token in this variable
+
+
+                Root rootObj = new Root();
+                rootObj.message = new Message();
+
+                rootObj.message.token = FireId;
+
+                //rootObj.message.token = "111";
+
+
+                rootObj.message.data = new Data();
+                rootObj.message.data.title = "Data Title";
+                rootObj.message.data.body = "Data Body";
+                rootObj.message.data.key_1 = "Sample Key";
+                rootObj.message.data.key_2 = "Sample Key2";
+                rootObj.message.notification = new Notification();
+                rootObj.message.notification.title =message.PushTitle;
+                rootObj.message.notification.body = message.PushBody;
+
+                //-------------Convert Model To JSON ----------------------
+
+                var jsonObj = new JavaScriptSerializer().Serialize(rootObj);
+
+                //------------------------Calling Of FCM Notify API-------------------
+
+                var data = new StringContent(jsonObj, Encoding.UTF8, "application/json");
+                data.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+
+                var response = client.PostAsync(ConfigurationManager.AppSettings["googleapis"].ToString(), data).Result; // Calling The FCM httpv1 API
+
+                //---------- Deserialize Json Response from API ----------------------------------
+
+                var jsonResponse = response.Content.ReadAsStringAsync().Result;
+                var responseObj = new JavaScriptSerializer().DeserializeObject(jsonResponse);
+
+                return "ok";
+            }
+            catch (Exception ex)
+            {
+                return ex.Message;
+            }
+        }
+
+        public string SendSMS(string Message, string Phone)
         {
             string BLMJ = string.Empty;
 

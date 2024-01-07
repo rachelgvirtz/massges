@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "my-shidduch",
+  "private_key_id": "5dd772549631b1ae353a1a34978e143eb7f91035",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCjgy4Cg+KbgGAi\ntft5wALGkHiwCN5zdzETA9afLfxg5mUMkHUG874dhWUTGokvB9Av+kHePTxDUchp\nQkRqtbTQ0P8D2/K08VxWLtUaX6Dyqa79u4ce5MkPAs+XSfURICvzg8Z/TB9NYAc9\nWxpoQ5c4g2xajWt3iw0vdgx0VkW3UjvFbFXO+RbgqJsBhusk+mrtZoKxNwH2rEgm\nYh24zGw4wiIlUCc96I+sGoVyvu9A/aFCFdcymRUvCH8JMFdLe48vPbr133/H8QSZ\nnWAC4+N4PQzpvkNlFbN7pbov8lw4BWBmSdRiGg5XTxf03KG0TEqwy0B7rq2pQyc9\nQwHD3XOPAgMBAAECggEABVfnwgHzVCeUJ1jmbepzbMUTMerS8i0GooYb67nB/Jyq\n2AfvJcSuBXhIKaFSswHAsOtZtFyF7UvtOQYHBwGxy1J5HZ7WG0mj6IEWn7UDpR/H\nGILvUyLLhee5RvVjbSWC/4M357hiHCeI37LBddTM9Ut+LVC1Hq6hm1fH576wqovt\nBIrcAtBtjM3DfV1FkfWmBkZMeeUvYDDWAgmYzGqNpdJMVXqClWLsoNwTsimweO2r\ndYxeUe2NFzsoW1ExYHDFyRWZJAOLBqtRnh3moafcFkk8c9Sad1iwx/XjMSiepPxJ\nyikNCJE1fpcMqs2mYBByc/4E/KncD60Gnjd44mfFuQKBgQDX9CDCxO0n40vkB+wZ\nEyYvsDmSmmpV7tSUvqUHGiJbzpSCN7C6bIS/pY/HPgBmxMggTOZ3GyTvaKHODrpe\nBgyBTmH2v9tE+HxFr6UNC9lpPhe4xIm1VKPI6OhxrZqsetO6sENLTcisHekiKG0X\nKUzc2rJGmLcyQAImy8Fq+9QfEwKBgQDB1YiMvjXOaL68k+kfYUCmWYvB4uIJOLTQ\nMB+QOSOAiCXL8W02uL7Gh1B2xrpQOxYZk07ePkcKoI8kjMiHKTTGVcF7bADq+gxb\n7adFWfSiNqQGcNzxCyqy/gALTX3XT9RHbO4gpzHwabRNohVFueA/rxLDTED868YL\n+CEnT79dFQKBgA3KSCFH5AENEbaRDvGW+HRJI5QKCkpMgwSwm+c1MwZ7zZ33InD1\nJxD56JGHkwz8+e6eGoV2lUg4fUSkSiBg8IF9WOIh5EWmPIFSsw5/ODXxQiCJZGXQ\n7tiQju9bb6od+dFNGi7/25WqH04QGM9G0uKzkHjTnbc2wSxrDIHhbO1DAoGBAKsP\ndKOo1blkbTflXO4JmNF140Xnoc27kq7MWX6hPniXLqwOU3Dgl9SC5Hr+JLzbeER3\n4Tl3QqDZU5pQ+EN4FRAX7Fms1h6JL9ENKfqlSaTCjfz1K7c6QKOYT5ep+q3C0Ld8\nJacBhqwBzVJaAWX4hTQOoINkT1ImDTDQ+QlFcr+FAoGBANFB5OkqQs8m3bipLq1O\nbGRSIIKjDld3NdWkHxalEDdbH7u9SavT7xbd3azQzvyzKgCcuRAIf1Omi4bqO1xF\nDouqGj5HXu5VrT5HZgc1eqbRjG/GssoTBDNQKbDze6hj08nnSLBRyA50duW48Ajw\nQW9P27jbWCwN0EhUhT+SUoi6\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-g4xov@my-shidduch.iam.gserviceaccount.com",
+  "client_id": "115116203524430972296",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-g4xov%40my-shidduch.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
